@@ -74,7 +74,7 @@ const handleSubmit = async (event: Event) => {
 
   loader(messageDiv);
 
-  const response = await fetch("http://localhost:5000", {
+  const response = await fetch("https://dreis-codex.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const handleSubmit = async (event: Event) => {
 
   if (!response.ok) {
     const error = await response.text();
-    messageDiv.innerHTML = "Something went wrong";
+    messageDiv.innerHTML = "Something went wrong.";
     alert(error);
   }
 
